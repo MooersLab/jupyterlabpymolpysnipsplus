@@ -1,3 +1,6 @@
+# Description:  A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. This code should reside in a folder named pymol.python in the ~/Library/Jupyter/kernels.
+# Source:  placeHolder
+
 """
 cmd.do('framerule=2pt,')
 cmd.do('framesep=2mm,')
@@ -17,6 +20,7 @@ cmd.do(' "display_name": "pymol.python",')
 cmd.do(' "language": "python"')
 cmd.do('}')
 """
+
 cmd.do('framerule=2pt,')
 cmd.do('framesep=2mm,')
 cmd.do('framesep=2mm,')
@@ -33,7 +37,3 @@ cmd.do('  "{connection_file"')
 cmd.do(' ],')
 cmd.do(' "display_name": "pymol.python",')
 cmd.do(' "language": "python"')
-
-# Description:  A kernel.json file for runnig PyMOL python interpreter in the Jupyter notebook. 
-# Source:  placeHolder
-

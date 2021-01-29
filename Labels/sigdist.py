@@ -1,0 +1,8 @@
+# Description:  Set distance labels to display 2 decimals.
+# Source:  placeHolder
+
+"""
+cmd.do('set label_distance_digits, ${1:2};')
+"""
+
+cmd.do('set label_distance_digits, 2;')

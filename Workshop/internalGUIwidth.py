@@ -1,9 +1,8 @@
-"""
-cmd.do('internal_gui_width=%{1:20};')
-"""
-cmd.do('internal_gui_width=%{1:20;')
-
-# Description:  Set the width of the internal gui. 
-
+# Description:  Set the width of the internal gui. Set to 0 to make the internal gui vanish.
 # Source:  placeHolder
 
+"""
+cmd.do('set internal_gui_width=${1:0};')
+"""
+
+cmd.do('set internal_gui_width=0;')

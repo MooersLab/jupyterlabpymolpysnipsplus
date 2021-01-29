@@ -1,3 +1,6 @@
+# Description:  Source block template in org-mode with emacs-jupyter package.
+# Source:  placeHolder
+
 """
 cmd.do('#+BEGIN_SRC jupyter-python :session py :kernel pymol.python :exports both :results raw drawer ')
 cmd.do('from pymol import cmd')
@@ -5,7 +8,7 @@ cmd.do('cmd.do("reinitialize")')
 cmd.do('cmd.bg_color("white")')
 cmd.do('cmd.do("fetch 6VXX")')
 cmd.do('cmd.do("zoom (resi 614 and chain A)")')
-cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")')
+cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression=""%s-%s" % (resn,resi)")')
 cmd.do('cmd.do("set label_color, black; set label_size, 48")')
 cmd.do('cmd.do("set stick_radius, 0.12")')
 cmd.do('cmd.do("hide cartoon; show sticks")')
@@ -20,13 +23,14 @@ cmd.do('#+END_SRC')
 cmd.do('')
 cmd.do('#+RESULTS:')
 """
+
 cmd.do('#+BEGIN_SRC jupyter-python :session py :kernel pymol.python :exports both :results raw drawer ')
 cmd.do('from pymol import cmd')
 cmd.do('cmd.do("reinitialize")')
 cmd.do('cmd.bg_color("white")')
 cmd.do('cmd.do("fetch 6VXX")')
 cmd.do('cmd.do("zoom (resi 614 and chain A)")')
-cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression="'%s-%s' % (resn,resi)")')
+cmd.do('cmd.label(selection="chain A and resi 614 and name CB", expression=""%s-%s" % (resn,resi)")')
 cmd.do('cmd.do("set label_color, black; set label_size, 48")')
 cmd.do('cmd.do("set stick_radius, 0.12")')
 cmd.do('cmd.do("hide cartoon; show sticks")')
@@ -40,8 +44,3 @@ cmd.do('Image(filename = PATH + "D614Gipython3.png", width=600, unconfined=True)
 cmd.do('#+END_SRC')
 cmd.do('')
 cmd.do('#+RESULTS:')
-cmd.do('$0')
-
-# Description:  Source block template in org-mode with emacs-jupyter package. 
-# Source:  
-

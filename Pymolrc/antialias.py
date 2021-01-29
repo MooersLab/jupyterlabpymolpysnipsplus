@@ -1,8 +1,8 @@
-"""
-cmd.do('set antialias, 1;')
-"""
-cmd.do('set antialias, 1;')
-
-# Description:  Set antialias to get smooth edges
+# Description:  Set antialias to on to get smoother edges.
 # Source:  placeHolder
 
+"""
+cmd.do('set antialias, 1;')
+"""
+
+cmd.do('set antialias, 1;')

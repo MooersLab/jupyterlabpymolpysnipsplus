@@ -1,3 +1,6 @@
+# Description:  Scale the radius and color of atoms as spheres by property in the B-value column.
+# Source:  placeHolder
+
 """
 cmd.do('bg_color white;')
 cmd.do('hide everything;')
@@ -18,15 +21,16 @@ cmd.do('M = max(stored.bb);')
 cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')
 cmd.do('count = 0;')
 cmd.do('# set the sphere radii independently;')
-cmd.do('#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB]')
+cmd.do('#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB];')
 cmd.do('for x in scaledBB:')
 cmd.do('  cmd.set("sphere_scale", x ,"ID %s"%count)')
 cmd.do('  count = count + 1')
-cmd.do('python end')
+cmd.do('python end;')
 cmd.do('spectrum b, selection=${2:4gdx};')
 cmd.do('space cmyk;')
 cmd.do('set specular_intensity , 0.25;')
 """
+
 cmd.do('bg_color white;')
 cmd.do('hide everything;')
 cmd.do('show spheres;')
@@ -46,15 +50,11 @@ cmd.do('M = max(stored.bb);')
 cmd.do('scaledBB = map(lambda x: float (x/M), stored.bb);')
 cmd.do('count = 0;')
 cmd.do('# set the sphere radii independently;')
-cmd.do('#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB]')
+cmd.do('#[(cmd.set("sphere_scale", x ,"ID %s"%count); count = count + 1) for x in scaledBB];')
 cmd.do('for x in scaledBB:')
 cmd.do('  cmd.set("sphere_scale", x ,"ID %s"%count)')
 cmd.do('  count = count + 1')
-cmd.do('python end')
+cmd.do('python end;')
 cmd.do('spectrum b, selection=4gdx;')
 cmd.do('space cmyk;')
 cmd.do('set specular_intensity , 0.25;')
-
-# Description:  Scale the radius and color of atoms as spheres by property in the B-value column.
-# Source:  placeHolder
-
